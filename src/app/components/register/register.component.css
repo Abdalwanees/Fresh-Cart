@@ -1,0 +1,48 @@
+.login-form__sub-title{
+    font-size: 14px;
+    margin-bottom: 6px;
+    margin-top: 20px;
+  }
+  .custom-radio{
+    margin: 0 35px 0 5px;
+  }
+  .custom-radio input:checked~label:before {
+    border: 1px solid #908e97;
+    background: #22242a;
+    box-shadow: inset 0 0 0 2px #fff;
+  }
+  
+label{
+  font-size: 0.8rem;
+}
+.mt-15{
+  margin-top: 15px;
+}
+
+
+  .custom-radio label:before {
+      content: "";
+      background: #fff;
+      border: 1px solid #ced4da;
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      left: 12px;
+      top: 6px;
+      border-radius: 100%;
+      text-align: center;
+      transition: all .25s ease;
+  }
+  
+  
+  .label-radio{
+    margin-left: 0.2em;
+  }
+  
+  @media screen and (max-width:676px) {
+    .label-radio{
+      margin-left: 0;
+      font-size: 15px;
+    }
+    
+  }

@@ -1,0 +1,45 @@
+<nav class="navbar align-items-center justify-content-center fixed-top"  [class]="scrolled ? 'py-2' : 'py-4'">
+    <div class="one ">
+        <a class="fs" >FreshCart</a>
+    </div>
+    <div class="two">
+        <div class="router">
+            <a class="ps-4" routerLink="/home">Home</a>
+         
+        </div>
+        <div class="router">
+            <a class="ps-4" routerLink="/product">Products</a>
+            
+        </div>
+        <div class="router">
+            <a class="ps-4"  routerLink="/brands">Brands</a>
+            
+        </div>
+    </div>
+    
+    <div class="four">
+       
+            <div class="d-flex align-items-center cursour-pointer" routerLink="/search">
+                <img src="./assets/image/searching-bar.png" alt="" width="45px">
+                
+            </div>
+            
+            <div class=" user d-flex align-items-center cursour-pointer ">
+                <img src="./assets/image/account.png" alt="" width="21px" class="position-relative">
+                
+                <div class="dropmenu">
+                    <button class=" btn-main w-100 mx-auto " (click)="logOut()"> LogOut </button>
+                 
+                </div>
+            </div>
+            <div class="d-flex align-items-center cursour-pointer" routerLink="/wishlist">
+                <img src="./assets/image/heart.png" alt="" width="21px">
+                
+            </div>
+            <div class="d-flex align-items-center cursour-pointer position-relative" routerLink="/cart">
+                <img src="./assets/image/shopping-bag.png" alt="" width="21px">
+                <span class="badge  position-absolute font">{{navCartNumber}}</span>
+            </div>
+        
+    </div>
+</nav>

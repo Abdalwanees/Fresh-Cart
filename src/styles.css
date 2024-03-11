@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #212529;
+  --secoend-color: #fff;
+  --thirty-color: #22242a;
+  --fourty-color: #585562;
+  --main-font: "Mulish", sans-serif;
+  --bg-main: RGBA(0, 0, 0, 0);
+}
+a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: var(--main-color);
+  background-color: var(--secoend-color);
+  font-family: var(--main-font);
+  overflow-x: hidden;
+}
+.cursour-pointer{
+    cursor: pointer;
+}
+.my-5{
+  margin-top: 10em !important;
+}
+.err{
+  color: rgb(224, 16, 16);
+  font-size: 0.7rem;
+}
+
+.rating-color{
+  color: var(--main-color);
+}
+.discount{
+  color: rgb(197, 34, 34);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.link-active{
+  font-size: 25px;
+  font-weight: 700;
+  display: inline-block;
+  color:#000;
+}
+.link-active{
+  position: relative;
+}
+.link-active::after{
+  position: absolute;
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #22242a;
+  transition: all .5s;
+}
+.link-active:hover::after{
+  text-shadow: 0 0 1px var(--thirty-color);
+  width: 100%;
+}
+
+.form-control {
+  border-top: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-bottom: 1px solid #000 !important;
+  border-radius: 0 !important;
+}
+.form-control:disabled {
+  background-color: transparent;
+  opacity: 1;
+}
+.custom-input {
+  position: relative;
+}
+.custom-input label {
+  position: absolute;
+  top: 16px;
+  font-size: 14px;
+  color: #22242a;
+  display: block;
+  width: 100%;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  margin-bottom: 0 !important;
+  letter-spacing: 0 !important;
+}
+
+.custom-input input:focus + label {
+  top: -3px;
+  font-size: 10px;
+  color: #c7c6cb;
+  margin-bottom: 0;
+  line-height: 14px;
+  letter-spacing: 0;
+}
+
+.custom-select {
+  border: none;
+  height: 46px;
+  border-bottom: 1px solid var(--thirty-color) !important;
+  width: 100%;
+  background-position-x: 100%;
+  font-size: 14px;
+  font-weight: 400;
+}
+.form-control:focus {
+  box-shadow: none;
+  outline: 0 !important;
+  border: 1px solid #000;
+}
+
+.btn-main {
+  padding: 0 10px;
+  height: 45px;
+
+  font-size: 0.7rem;
+  color: #fff;
+  border-radius: 0;
+  background-color: #22242a;
+  border: 1px solid #22242a;
+  transition: 0.5s;
+}
+.btn-main:hover {
+  color: #22242a;
+  background: #fff;
+}
+.button--fluid {
+  width: calc(100% - 2px);
+  
+}
+.button--big {
+  height: 45px;
+}
+.layer{
+  position: fixed;
+  z-index: 999;
+  top: 15%;
+  right: 15px;
+
+ 
+}
+.toster{
+  border: 1px solid RGBA(75, 75, 75, 0.5);
+  padding: 20px;
+  background-color: #fff;
+}
+

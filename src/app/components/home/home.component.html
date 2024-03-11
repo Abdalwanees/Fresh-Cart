@@ -1,0 +1,319 @@
+<div class="my-5">
+    <h1 class="text-center font-15 fw-bold">HOME</h1>
+</div>
+
+
+
+
+
+
+
+<section class="my-5 ">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="header-img d-flex justify-content-between align-items-center text-center">
+                    <div>
+                        <div class="sale">
+
+                            <h3 class="m-0 font-15">Sale</h3>
+                        </div>
+                        <h4 class="font mt-2">sale</h4>
+                    </div>
+                    <div class="">
+                        <img src="./assets/image/home/home 1.jpg" width="100px" height="100px" class="rounded-circle"
+                            alt="">
+                        <h4 class="font mt-2">New in-brands
+                        </h4>
+                    </div>
+                    <div class="">
+                        <img src="./assets/image/home/home 2.jpg" width="100px" height="100px" class="rounded-circle"
+                            alt="">
+                        <h4 class="font mt-2">Fantasie</h4>
+                    </div>
+                    <div class="">
+                        <img src="./assets/image/home/home 3.jpg" width="100px" height="100px" class="rounded-circle"
+                            alt="">
+                        <h4 class="font mt-2">Radley</h4>
+                    </div>
+                    <div class="">
+                        <img src="./assets/image/home/home 4.jpg" width="100px" height="100px" class="rounded-circle"
+                            alt="">
+                        <h4 class="font mt-2">Radley</h4>
+                    </div>
+                    <div class="">
+                        <img src="./assets/image/home/home 5.jpg" width="100px" height="100px" class="rounded-circle"
+                            alt="">
+                        <h4 class="font mt-2">Nobody’s Child</h4>
+                    </div>
+                    <div class="">
+                        <img src="./assets/image/home/home 6.jpg" width="100px" height="100px" class="rounded-circle"
+                            alt="">
+                        <h4 class="font mt-2">FatFace</h4>
+                    </div>
+                    <div class="">
+                        <img src="./assets/image/home/home 7.jpg" width="100px" height="100px" class="rounded-circle"
+                            alt="">
+                        <h4 class="font mt-2">White Stuff</h4>
+                    </div>
+                    <div class="">
+                        <img src="./assets/image/home/home 8.jpg" width="100px" height="100px" class="rounded-circle"
+                            alt="">
+                        <h4 class="font mt-2">Seasalt Cornwall</h4>
+                    </div>
+                    <div class="">
+                        <img src="./assets/image/home/home 9.jpg" width="100px" height="100px" class="rounded-circle"
+                            alt="">
+                        <h4 class="font mt-2">The Sports Edit</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<section class="my-3">
+    <owl-carousel-o [options]="categoriesSliderOptions">
+      <ng-container *ngFor="let item of categories">
+        <ng-template carouselSlide>
+          <div (click)="categoryDetails(item._id, item.name)"
+          class="p-2 cursour-pointer">
+            <img
+              height="270"
+              [src]="item.image"
+              [alt]="item.name"
+              class="w-100"
+            />
+            <h3 class="h5">{{ item.name }}</h3>
+          </div>
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+  </section>
+
+<section class="my-5 ">
+    <div class="the-sale">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <img src="./assets/image/sale.jfif" width="250px" alt="">
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <h3 class="font-15">ONLINE& IN STORE NOW</h3>
+                    <h2 class="font-15 fw-bold">ENJOURE UP TO 50% OFF</h2>
+                    <h3 class="font-15">SHOP BRANDS SALE --> </h3>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="my-5 ">
+
+    <div class="row g-0">
+        <div class=" col-12 col-md-6">
+            <img src="./assets/image/home/section 1.jpg" width="100%" class="border" height="700px" alt="">
+        </div>
+        <div class="col-md-6">
+            <div class="row g-0">
+                <div class="col-md-6">
+                    <img src="./assets/image/home/section 2.jpg" width="100%" class="border" height="300px" alt="">
+                </div>
+                <div class="col-md-6">
+                    <img src="./assets/image/home/section 3.jpg" width="100%" class="border" height="300px" alt="">
+                </div>
+                <div class="col-md-12">
+                    <img src="./assets/image/home/section 4.jpg" width="100%" class="border" height="400px" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="my-5 ">
+    <div>
+        <div class="container">
+            <h2 class="font-15 fw-bold text-center my-4">
+                Don’t Miss Out
+            </h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div>
+                        <img src="./assets/image/home/dont miss.jpg" class="w-100" height="450px" alt="">
+                    </div>
+                    <div class="mt-2">
+                        <h3 class="font">
+                            relme phone
+                        </h3>
+                        <span class="font-15 fw-bold">Shop Relme <i class="fa-solid fa-arrow-right font"></i></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <img src="./assets/image/home/dont miss 2.jpg" class="w-100" height="450px" alt="">
+                    </div>
+                    <div class="mt-2">
+                        <h3 class="font">
+                            relme phone
+                        </h3>
+                        <span class="font-15 fw-bold">Shop Relme <i class="fa-solid fa-arrow-right font"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="hp my-5">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-7">
+                <div>
+                    <img src="./assets/image/home/visit.jpg" class="w-100 " height="700px" alt="">
+                </div>
+            </div>
+            <div class="col-5">
+                <div class="">
+                    <h1 class="font-15 fw-bold">
+                        Just in: hp
+                    </h1>
+                    <p class="font">
+                        The iconic HP product, renowned for its cutting-edge
+                        technology, sleek design,
+                        and reliable performance, is now available
+                    </p>
+
+                    <span>shop hp <i class="fa-solid fa-arrow-right font"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="my-5">
+    <div class="container">
+        <h2 class="font-15  text-center pb-3">
+            LET’S GO OUTSIDE
+        </h2>
+
+        <div class="row">
+            <div class="col-md-4">
+
+                <img src="./assets/image/home/end 1.png" width="100%" height="500px" alt="">
+                <div class="my-2">
+                    <span>
+                        SHOP SAMSUNG 
+                        <i class="fa-solid fa-arrow-right font"></i>
+                    </span>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+
+                <img src="./assets/image/home/end 2.jpg" width="100%" height="500px" alt="">
+                <div class="my-2">
+
+                    <span class="my-5">
+                        SHOP OPPO
+                         <i class="fa-solid fa-arrow-right font"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-4">
+
+                <img src="./assets/image/home/end 3.jpg" width="100%" height="500px" alt="">
+                <div class="my-2">
+
+                    <span class="my-5">
+                        SHOP JBL 
+                        <i class="fa-solid fa-arrow-right font"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="my-5 position-relative">
+    <div class="container-fluid ">
+
+
+        <owl-carousel-o [options]="homeSlider">
+
+            <ng-container *ngFor="let product of products.slice(32,40)">
+                <ng-template carouselSlide>
+                    <div class="product-cart  ">
+
+                        <div class="product-cart-img position-relative">
+
+                            <div class="div">
+                                <img [src]="product.imageCover" class="w-100 " [alt]="product.title">
+                            </div>
+
+                            <div class="product-love" (click)="addToWishList(product._id)" *ngIf="!wishlist.includes($any(product._id))">
+                                <img src="../../../assets/image/heart.png" width="20px" alt="">
+
+                            </div>
+                            <div class="product-love" (click)="deleteItem(product._id)" *ngIf="wishlist.includes($any(product._id))">
+                                <img src="../../../assets/image/love.png" width="20px" alt="">
+                            </div>
+
+                            <div class="add d-flex align-items-center">
+                                <button class="reviwe w-50 button-big " [routerLink]="['/details',product._id]">Quick
+                                    Review <i class="fa-solid fa-info ps-2 fa-6"></i></button>
+                                <button class="add-to-cart w-50 button-big " (click)="addToCart(product._id)">
+                                    Add to cart  
+                                    <i class="fa-solid fa-cart-plus ps-2 fa-6"></i>
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="product-cart-info py-3">
+                            <div class="product-details">
+                                <h3 class="font">{{product.title | cutText:2}}</h3>
+                            </div>
+
+
+                            <div class="price d-flex flex-column my-4">
+                                <h3 class="font-15">{{product.price}} <span>EGP</span></h3>
+                                <h3 class="font">30% Discount
+                                    <span class="mt-1 ps-2" [class.discount]="product.price>300">{{product.price |
+                                        discount:30 | number:'1.0-0'}}
+                                        <span>EGP</span>
+                                    </span>
+                                </h3>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </ng-template>
+            </ng-container>
+
+        </owl-carousel-o>
+    </div>
+    <div class="layer" *ngIf="showToaster">
+        <div class="toster">
+            <p class="font"> <span class="pe-2"><img src="./assets/image/tick.png" width="20px" alt=""></span>
+                {{success}}</p>
+            <div>
+                <button class="btn-main font w-100" routerLink="/cart"> Go to cart </button>
+            </div>
+
+        </div>
+    </div>
+
+</section>

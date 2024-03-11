@@ -1,0 +1,93 @@
+section{
+    color: var(--main-color);
+}
+.fs{
+    font-size: 0.9rem;
+    font-weight: 500px;
+}
+.product-cart-img{
+    box-shadow: 0 2px 8px 0 rgba(99,99,99,.2);
+}
+.product-cart-img .add{
+ position: absolute;
+ bottom: 0px;
+ right: 0;
+ left: 0;
+ opacity: 0;
+ transition: opacity 0.5s ;
+  }
+  .product-cart-img:hover .add{
+    opacity: 1;
+  }
+  .add-to-cart {
+    padding: 0 10px;
+    font-size: 0.7rem;
+    color: #22242a;
+    border-radius: 0;
+    background-color: #fff;
+    border: 1px solid #22242a;
+  }
+  .reviwe {
+    padding: 0 10px;
+    font-size: 0.7rem;
+    color: #fff;
+    border-radius: 0;
+    background-color: #22242a;
+    border: 1px solid #22242a;
+  }
+
+  .button-big {
+    height: 40px;
+  }
+  
+.product-love{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 3;
+    cursor: pointer;
+    box-shadow: 0 2px 8px 0 rgba(99,99,99,.2);
+}
+
+.product-ratting {
+   color:  RGBA(75, 75, 75, 0.5);
+    font-size: 16px;
+}
+.font{
+  font-size: 0.7rem;
+}
+.font-15{
+  font-size: 1rem;
+}
+
+.res-image{
+  max-width: 100%;
+  height: auto;
+}
+.sale{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgb(235, 20, 20);
+  display: flex;
+  
+  align-items: center;
+  justify-content: center;
+}
+  .the-sale{
+      background-color: rgb(228, 21, 21);
+      color: #fff;
+      padding: 20px;
+  }
+
+  .my-5{
+    margin-top: 6em !important;
+  }

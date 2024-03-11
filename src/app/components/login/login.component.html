@@ -1,0 +1,122 @@
+<section class=" d-flex justify-content-center align-items-center">
+    <form class=" w-75 mx-auto" [formGroup]="login" (ngSubmit)="onSubmit()">
+
+        <div class="container">
+            <div class="row">
+               
+                    
+                <div class="col-md-12 custom-input mt-15">
+                    <input id="email" type="email" class="form-control" formControlName="email" #email>
+                    <label for="email"> Email </label>
+                    <div class="error"  *ngIf="login.get('email')?.errors && (login.get('email')?.touched || email.value.length > 0)">
+                        <div *ngIf="login.get('email')?.getError('required')" class="err font"><i class="fa-solid fa-circle-exclamation"></i>email is required</div>
+                        <div *ngIf="login.get('email')?.getError('pattern')" class="err font"><i class="fa-solid fa-circle-exclamation"></i> You should enter a valid email.</div>
+                     </div>
+                </div>
+                <div class="col-md-12 custom-input mt-15">
+                    <input id="password" type="password" class="form-control" formControlName="password" #password>
+                    <label for="password">Password</label>
+                    <div class="error"  *ngIf="login.get('password')?.errors && (login.get('password')?.touched || password.value.length > 0)" >
+                        <div *ngIf="login.get('password')?.getError('required')" class="err font"><i class="fa-solid fa-circle-exclamation"></i>password is required</div>
+                        <div *ngIf="login.get('password')?.getError('pattern')" class="err font"><i class="fa-solid fa-circle-exclamation"></i> Your password should have at least 8 characters, 1 UPPERCASE, 1 lowercase, 1 number, 1 $peci@l ch@r@cter.</div>
+                     </div>
+                </div>
+
+            </div>
+
+            <div class=" mt-3 d-flex justify-content-between align-items-center">
+                <a (click)="forgetPassword()" class="cursour-pointer link-active font">Forget Password</a>
+                 <button type="submit" class="btn-main button--fluid button--big w-25 font">Login</button> 
+            </div>
+            <div class="text-center">
+                <p class="err font">{{msg}}</p>
+            </div>
+
+
+
+        </div>
+
+    </form>
+
+
+   <div class="forgrt-password" *ngIf="forgetPasswordModel" >
+    <div  class="model position-fixed d-flex align-items-center" id="model">
+        <div class="layer-model position-fixed top-0 start-0 end-0 bottom-0 z-n1" ></div>
+        <div *ngIf="step1" class="modal-card  m-auto p-4">
+            <div class="close cursour-pointer d-flex justify-content-end fs-17" (click)="closeForgetPassword()"><i class="fa-solid fa-xmark"></i></div>
+            <div class="modal-card-header">
+                <h3 class="modal-card-title">Forget Password</h3>
+                <p class="fs-17">You can reset your password using your registered e-mail address.</p>
+            </div>
+            <div class="modal-card-body">
+                <form [formGroup]="sendUserEmail" (ngSubmit)="sendEmail()">
+                    <div class="form-group ">
+                       
+                        <input type="email" class="form-control " placeholder="Email" formControlName="email" #email>
+                        <div class="error"  *ngIf="login.get('email')?.errors && (login.get('email')?.touched || email.value.length > 0)">
+                      
+                         </div>
+                        <button class="btn-main button--big mt-15 w-100">send</button>
+                    </div>
+                    <p class="err mt-15">{{msg}}</p>
+                </form>
+                
+            </div>
+        </div>
+
+        <div *ngIf="step2" class="modal-card  m-auto p-4">
+            <div class="close cursour-pointer d-flex justify-content-end fs-17" (click)="closeForgetPassword()"><i class="fa-solid fa-xmark"></i></div>
+            <div class="modal-card-header">
+                <h3 class="modal-card-title">Reset Code</h3>
+                <p class="fs-17">Enter the code that was sent to you.</p>
+            </div>
+            <div class="modal-card-body">
+                <form [formGroup]="sendCode" (ngSubmit)="resetCode()">
+                    <div class="form-group ">
+                       
+                        <input type="number" class="form-control " placeholder="code" maxlength="6" formControlName="code">
+                        <button class="btn-main button--big mt-15 w-100">send</button>
+                    </div>
+                    <p class="err mt-15">{{msg}}</p>
+                </form>
+                
+            </div>
+        </div>
+
+
+        <div *ngIf="step3" class="modal-card  m-auto p-4">
+            <div class="close cursour-pointer d-flex justify-content-end fs-17" (click)="closeForgetPassword()"><i class="fa-solid fa-xmark"></i></div>
+            <div class="modal-card-header">
+                <h3 class="modal-card-title">Reset Code</h3>
+                <p class="fs-17">Enter the New Password</p>
+            </div>
+            <div class="modal-card-body">
+                <form [formGroup]="newPassword" (ngSubmit)="newpassword()">
+                    <div class="form-group ">
+                       
+                        <input type="email" class="form-control " placeholder="Email"  formControlName="email">
+                        <div class="error"  *ngIf="login.get('email')?.errors && (login.get('email')?.touched || email.value.length > 0)">
+                            <div *ngIf="login.get('email')?.getError('required')" class="err"><i class="fa-solid fa-circle-exclamation"></i>email is required</div>
+                            <div *ngIf="login.get('email')?.getError('pattern')" class="err"><i class="fa-solid fa-circle-exclamation"></i> You should enter a valid email.</div>
+                         </div>
+                        <input type="password" class="form-control " placeholder="New Password"  formControlName="newPassword">
+                        <div class="error"  *ngIf="login.get('password')?.errors && (login.get('password')?.touched || password.value.length > 0)" >
+                            <div *ngIf="login.get('password')?.getError('required')" class="err"><i class="fa-solid fa-circle-exclamation"></i>password is required</div>
+                            <div *ngIf="login.get('password')?.getError('pattern')" class="err"><i class="fa-solid fa-circle-exclamation"></i> Your password should have at least 8 characters, 1 UPPERCASE, 1 lowercase, 1 number, 1 $peci@l ch@r@cter.</div>
+                         </div>
+                        <button class="btn-main button--big mt-15 w-100">send</button>
+                    </div>
+                </form>
+                <p class="err mt-15">{{msg}}</p>
+            </div>
+        </div>
+    </div>
+   </div>
+
+
+
+</section>
+
+
+
+

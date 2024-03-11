@@ -1,0 +1,111 @@
+<section class="my-5">
+  <div>
+    <h1 class="text-center font-15 fw-bold">Basket</h1>
+  </div>
+<div class="container-fluid">
+
+    <div class="cart-header mb-1">
+        <h2 class="font-15">Shopping Cart <span class="font">({{cartItem}} product)</span></h2>
+        <div class="clear " (click)="clrearCart()">
+            <span class="font cursour-pointer">Clear Basket</span>
+        </div>
+    </div>
+
+    <div class="row" >
+        <div class="col-md-8">
+            <div class="cart-details">
+                <div class="row linee" *ngFor="let item of cartData.products" >
+                    <div class=" d-flex">
+                     <div class="col-md-2 ">
+                         <img [src]="item.product.imageCover" class="w-100" alt="">
+                     </div>
+                     <div class="col-md-10 ms-3">
+                         <div class="title  d-flex align-items-center justify-content-between">
+                             <h3 class="font-15">{{item.product.title | cutText:2}}</h3>
+                             <div class="product-ratting d-flex align-items-center">
+                                <i [class.rating-color]="item.product.ratingsAverage>=star" *ngFor="let star of [1,2,3,4,5]" class="fa-solid fa-star font"></i><span class="ps-2 font">({{item.product.ratingsAverage}})</span>
+                            </div>
+                         </div>
+                         <div class="price my-1">
+                            <h3 class="font">{{item.price}} <span>EGP</span></h3>
+                            <h3 class="font" *ngIf="item.price>300">30% Discount
+                                <span class="mt-1 ps-2 font-15" [class.discount]="item.price>300">{{item.price | discount:30 | number:'1.0-0'}}
+                                    <span>EGP</span>
+                                </span>
+                            </h3>
+                         </div>
+                         <div class="count">
+                            <i class="fa-solid fa-minus color font cursour-pointer"  (click)="changeCount(item.product._id ,item.count - 1)"></i>
+                            <span class="mx-3 ">{{item.count}}</span>
+                            <i class="fa-solid fa-plus color font cursour-pointer"  (click)="changeCount(item.product._id ,item.count + 1)"></i>
+                         </div>
+                         <div class="remove d-flex align-items-center justify-content-between ">
+                             <div class="cursour-pointer" (click)="removeFromCart(item.product._id)">
+                                <img src="./assets/image/trash-bin.png" width="15px" alt="">
+                             <span class="mx-1 font">Remove</span>
+                             </div>
+                          
+                         </div>
+                         
+                     </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+        <div class="col-md-4 ">
+         <div class="cart-price">
+             <div class="total d-flex justify-content-between">
+                 <h4 class="font" >Total Amount</h4>
+                    <h3 class="font-15" *ngIf="totalPrice >= 300">{{ totalAfterDiscount | number:'1.0-0'}}</h3>
+                    <h3 class="font-15" *ngIf="totalPrice < 300">{{ totalPrice | number:'1.0-0'}}</h3> <!-- Total without discount if total price is less than 300 -->
+             </div>
+             <div class="line"></div>
+             <div class="sum">
+                <div class="d-flex justify-content-between">
+                    <h4 class="font">SubTotal</h4>
+                    <h3 class="font-15">{{ totalPrice | number:'1.0-0' }}</h3>
+                </div>
+                <div class="d-flex justify-content-between my-3">
+                    <h4 class="font">30% Discount </h4>
+                    <h3 class="font-15" *ngIf="totalPrice >= 300">{{ discountAmount | number:'1.0-0' }}</h3>
+                    <h3 class="font-15" *ngIf="totalPrice < 300">0</h3> <!-- No discount if total price is less than 300 -->
+                </div>
+                <div class="d-flex justify-content-between">
+                    <h4 class="font">Total</h4>
+                    <h3 class="font-15" *ngIf="totalPrice >= 300">{{ totalAfterDiscount | number:'1.0-0'}}</h3>
+                    <h3 class="font-15" *ngIf="totalPrice < 300">{{ totalPrice | number:'1.0-0'}}</h3> <!-- Total without discount if total price is less than 300 -->
+                </div>
+                <div class="pay">
+                    <button class="payment w-100 mt-2" [routerLink]="['/checkout',cartId]">Complete Order</button>
+                </div>
+                <div class="pay">
+                    <button class="payment w-100 mt-2" [routerLink]="['/checkout',cartId]">Cash on Delivery</button>
+                </div>
+            </div>
+            
+              
+            
+         </div>
+
+         <div class="my-4">
+            <div class="text-center">
+                <h5 class="font">Discover Payment Options</h5>
+                <div class="d-flex align-items-center justify-content-between w-25 mx-auto ">
+                    <img src="./assets/image/download (4).jfif" alt="" width="50px" class="">
+                    <img src="./assets/image/download (5).jfif" alt="" width="50px">
+                </div>
+            </div>
+            <div class="mt-3"> 
+                <h5 class="font text-center">Pay with Credit Card and Enjoy Extra Discount</h5>
+                <div class="d-flex align-items-center justify-content-center ">
+                    <img src="./assets/image/credit-card.png" alt="" width="25px">
+                </div>
+            </div>
+
+         </div>
+        </div>
+    
+     </div>
+</div>
+
+</section>

@@ -1,0 +1,43 @@
+<section class="checkout my-5">
+    <form class="w-50 mx-auto" [formGroup]="login" (ngSubmit)="onSubmit()">
+
+ <div class="container">
+
+    <div class="row">
+               
+             
+        <div class="col-md-12 custom-input mt-15">
+            <input id="phone" type="phone" class="form-control" formControlName="phone" #phone>
+            <label for="phone"> phone </label>
+            <div class="error"  *ngIf="login.get('phone')?.errors && (login.get('phone')?.touched || phone.value.length > 0)">
+                <div *ngIf="login.get('phone')?.getError('required')" class="err"><i class="fa-solid fa-circle-exclamation"></i>phone is required</div>
+             </div>
+        </div>
+
+        <div class="col-md-12 custom-input mt-15">
+            <input id="city" type="text" class="form-control" formControlName="city" #city>
+            <label for="city">city</label>
+            <div class="error"  *ngIf="login.get('city')?.errors && (login.get('city')?.touched || city.value.length > 0)" >
+                <div *ngIf="login.get('city')?.getError('required')" class="err"><i class="fa-solid fa-circle-exclamation"></i>city is required</div>
+             </div>
+        </div>
+
+        <div class="col-md-12 custom-input mt-15">
+            <input id="details" type="text" class="form-control" formControlName="details" #details>
+            <label for="details"> details </label>
+            <div class="error"  *ngIf="login.get('details')?.errors && (login.get('details')?.touched || details.value.length > 0)">
+                <div *ngIf="login.get('details')?.getError('required')" class="err"><i class="fa-solid fa-circle-exclamation"></i>details is required</div>
+             </div>
+        </div>
+
+        <div class="col-md-12 d-flex justify-content-end align-items-center">
+            <button type="submit" class="btn-main button--big mt-3 w-25" >submit</button>
+        </div>
+
+
+    </div>
+
+ </div>
+
+    </form>
+</section>

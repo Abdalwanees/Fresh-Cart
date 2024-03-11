@@ -1,0 +1,27 @@
+.msg{
+    text-align: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #22242a;
+}
+.product{
+    border: 1px solid RGBA(75, 75, 75, 0.5);
+    padding: 20px;
+}
+.title{
+    border-bottom: 1px solid RGBA(75, 75, 75, 0.5);
+    padding-bottom: 15px;
+    
+}
+.total{
+    border-top: 1px solid RGBA(75, 75, 75, 0.5);
+    margin-top: 15px;
+    padding-top: 15px;
+}
+
+.font-15{
+    font-size: 1rem;
+}
+.font{
+   font-size: 0.7rem;
+}

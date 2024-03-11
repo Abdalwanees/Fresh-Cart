@@ -1,0 +1,42 @@
+.pic{
+    border: 1px solid RGBA(75, 75, 75, 0.5);
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.sale{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: rgb(235, 20, 20);
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+}
+    .the-sale{
+        background-color: rgb(228, 21, 21);
+        color: #fff;
+        padding: 20px;
+    }
+    .adidas{
+        font-size: 1rem;
+    }
+
+.font-15{
+    font-size: 1rem;
+}
+.font{
+    font-size: 0.7rem;
+}
+.my-5{
+    margin-top: 6em !important; 
+}
+
+@media screen and (max-width: 750px) {
+    .more {
+        display: none;
+    }
+    
+}

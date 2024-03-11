@@ -1,0 +1,38 @@
+.mt-15{
+    margin-top: 15px;
+}
+.fs-17{
+    font-size: 0.8rem;
+}
+.fontIcon{
+    font-size: 1.2rem;
+}
+label{
+    font-size: 0.8rem;
+}
+.forgrt-password .model{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    z-index: 999;
+}
+
+.forgrt-password .layer-model{
+    background-color: 
+    RGBA(75, 75, 75, 0.5);
+}
+.modal-card{
+
+    width: 35%;
+ 
+    font-size: 14px;
+    background-color: #fff;
+}
+.font-15{
+    font-size: 1rem;
+}
+.font{
+    font-size: 0.7rem;
+}

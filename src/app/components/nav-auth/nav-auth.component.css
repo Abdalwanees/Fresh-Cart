@@ -1,0 +1,121 @@
+.container-fluid{
+    padding: 15px 30px !important;
+   
+}
+nav{
+  border-bottom: 1px solid RGBA(75, 75, 75, 0.5);
+  padding: 25px 15px;
+
+}
+.text-maiin{
+    color: var(--main-color) !important;
+}
+.nav-item span{
+    font-size: 0.8rem;
+    color: var(--fourty-color);
+    font-weight: 800;
+}
+.navbar .one{
+    width: 40%;
+    color: var(--main-color) !important;
+    font-size: 1.5rem;
+    font-weight: 900;
+  }
+
+  .navbar .four{
+   width: 60%;
+  }
+  a{
+    text-decoration: none;
+  }
+  .font{
+    font-size: 0.7rem;
+  }
+  .font-15{
+    font-size: 1rem;
+  }
+  .four span{
+    font-size: 1rem;
+    color: var(--fourty-color);
+    font-weight: 800;
+  }
+
+  .dropmenu {
+    border: 1px solid #e9e8ea;
+    width: 20%;
+    background: #fff;
+    padding: 16px;
+    position: absolute;
+    display: none;
+    z-index: 7;
+    top: 65px;
+    transition: all 0.5s ease;
+  }
+  .user:hover .dropmenu{
+    display: block;
+  }
+  
+  
+  .dropmenu-list {
+    margin: 0;
+    padding: 0;
+  }
+  .dropmenu-list-item{
+    border-bottom: 1px solid #e9e8ea;
+    margin-bottom: 8px;
+    padding: 16px 0; 
+  }
+  .fs-17{
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--bg-main);
+  }
+  li{
+    list-style: none;
+  }
+  
+  /*****                                                media query                                           *****/
+    
+  /***         997           ***/
+  @media screen and (max-width:997px) {
+    .dropmenu{
+      width: 25%;
+      right: 25px;
+    }
+
+    .navbar .four span{
+         display: none;   
+    }
+   
+  }
+  
+  /***         878          ***/
+  @media screen and (max-width:878px) {
+    .dropmenu{
+      width: 25%;
+      right: 70px;
+    }
+  }
+  
+  
+   /***          690              ***/
+  
+      
+  @media screen and (max-width:690px) {
+    .dropmenu{
+      width: 26%;
+     right: 20px;
+    }
+  }
+  
+  
+  /*****        597         *****/
+  
+  @media screen and (max-width:597px){
+    .dropmenu{
+      width: 26%;
+      right: 3px;
+      
+    }
+  }
+  

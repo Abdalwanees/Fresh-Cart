@@ -1,0 +1,254 @@
+nav {
+  border-bottom: 1px solid var(--main-color);
+  padding: 15px 20px;
+  background-color: #f1f1f1;
+}
+.navbar .one {
+  width: 15%;
+  color: var(--main-color) !important;
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+.navbar .two {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.navbar .three {
+  width: 35%;
+}
+.navbar .four {
+  width: 35%;
+  display: flex;
+  justify-content: space-evenly;
+}
+a {
+  text-decoration: none;
+}
+.four span {
+  font-size: 1rem;
+  color: var(--fourty-color);
+  font-weight: 800;
+}
+.dropmenu {
+  border: 1px solid #e9e8ea;
+  width: 20%;
+  background: #fff;
+  padding: 16px;
+  position: absolute;
+  display: none;
+  z-index: 7;
+  top: 55px;
+  transition: all 0.5s ease;
+}
+.user:hover .dropmenu {
+  display: block;
+}
+
+.dropmenu-list {
+  margin: 0;
+  padding: 0;
+}
+.dropmenu-list-item {
+  border-bottom: 1px solid #e9e8ea;
+  margin-bottom: 8px;
+  padding: 16px 0;
+}
+.fs-17 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--bg-main);
+}
+li {
+  list-style: none;
+}
+
+/*****                                                media query                                           *****/
+
+/***         997           ***/
+@media screen and (max-width: 997px) {
+  .dropmenu {
+    width: 25%;
+    right: 25px;
+  }
+  .navbar .one {
+    width: 15%;
+  }
+  .navbar .two {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar .four {
+    width: 25%;
+  }
+}
+
+/***         878          ***/
+@media screen and (max-width: 878px) {
+  .dropmenu {
+    width: 25%;
+    right: 70px;
+  }
+  .navbar .one {
+    width: 20%;
+  }
+  .navbar .two {
+    width: 55%;
+    font-size: 1rem;
+  }
+
+  .navbar .four {
+    width: 25%;
+  }
+  .navbar .four span {
+    display: none;
+  }
+}
+
+/***          690              ***/
+
+@media screen and (max-width: 690px) {
+  .dropmenu {
+    width: 26%;
+    right: 20px;
+  }
+  .navbar .one {
+    width: 10%;
+    font-size: 0.9rem;
+  }
+  .navbar .two {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+  }
+  .navbar .two .ps-4 {
+    padding: 10px !important;
+  }
+  .navbar .four {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+  }
+  .navbar .four span {
+    display: none;
+  }
+}
+
+/*****        597         *****/
+
+@media screen and (max-width: 597px) {
+  .dropmenu {
+    width: 26%;
+    right: 3px;
+  }
+  .fs-17 {
+    font-size: 0.6rem;
+  }
+  .navbar .one {
+    width: 5%;
+    font-size: 1.2rem;
+  }
+  .navbar .two {
+    width: 60% !important;
+    font-size: 0.7rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5em !important;
+  }
+  .navbar .two .ps-4 {
+    padding: 5px !important;
+  }
+  .navbar .four {
+    width: 35% !important;
+    display: flex ;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 487px) {
+  .navbar .one {
+    width: 5%;
+    font-size: 0.9rem;
+  }
+  .navbar .two {
+    width: 80%;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 3em;
+  }
+  .navbar .four {
+    width: 15%;
+    padding-right: 10px;
+  }
+}
+@media screen and (max-width: 597px) {
+  .dropmenu {
+    width: 26%;
+    right: 3px;
+  }
+  .fs-17 {
+    font-size: 0.6rem;
+  }
+  .navbar .one {
+    width: 5%;
+    font-size: 0.8rem;
+  }
+  .navbar .two {
+    width: 75%;
+    font-size: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 4em;
+  }
+  .navbar .two .ps-4 {
+    padding: 5px !important;
+  }
+  .navbar .four {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .navbar .one {
+    width: 5%;
+    font-size: 0.5rem;
+  }
+  .navbar .two {
+    width: 80%;
+    font-size: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 3em;
+  }
+  .navbar .four {
+    width: 15%;
+    padding-right: 10px;
+  }
+}
+.badge {
+  width:18px;
+  height:18px;
+  border-radius: 50%;
+  top: 0px;
+  right: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px !important;
+  font-weight: 700;
+  color: #fff !important;
+  background-color: #22242a;
+}
