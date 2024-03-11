@@ -1,59 +1,73 @@
-
 <section class="my-5">
-
-    <div>
-        <h1 class="text-center font-15 fw-bold mt-4">Favorite</h1>
-    </div>
-    <div class="container-fluid  ">
-        <div class="row g-4">
-    
-            <div class="col-12 col-md-6 col-xl-3" *ngFor="let product of wishlist">
-                <div class="product-cart">
-                    <div class="product-cart-img position-relative">
-                   
-                        <div class="div">
-                            <img [src]="product.imageCover" class="w-100 " [alt]="product.title">
-                        </div>
-    
-                    
-                        <div class="product-love" (click)="deleteItem(product._id)" *ngIf="!wishlist.includes($any(product._id))">
-                            <img src="../../../assets/image/love.png" width="25px" alt="">
-                        </div>
-                      
-                       <div class="add d-flex align-items-center">
-                         <button class="reviwe w-50 button-big " [routerLink]="['/details',product._id]">Quick Review <i class="fa-solid fa-info ps-2 fa-6"></i></button>
-                        <button class="add-to-cart w-50 button-big " (click)="addToCart(product._id)">Add to cart  <img src="./assets/image/add.png" width="25px" > </button>
-                       </div>
-    
-                    </div>
-                        
-    
-                    </div>
-    
-                    <div class="product-cart-info py-3">
-                        <div class="product-details" [routerLink]="['/details',product._id]">
-                            <h3 class="fs">{{product.title | cutText:2}}</h3>
-                        </div>
-    
-                        <div class="product-ratting">
-                            <i [class.rating-color]="product.ratingsAverage>=star" *ngFor="let star of [1,2,3,4,5]"
-                                class="fa-solid fa-star"></i><span class="ps-2">({{product.ratingsAverage}})</span>
-                        </div>
-                        <div class="price d-flex flex-column my-4" *ngIf="product.price>100">
-                            <h3 class="font-15">{{product.price}} <span>EGP</span></h3>
-                            <h3 class="font-15" *ngIf="product.price>300">30% Discount
-                                <span class="mt-1 ps-2" [class.discount]="product.price>300">{{product.price |
-                                    discount:30 | number:'1.0-0'}}
-                                    <span>EGP</span>
-                                </span>
-                            </h3>
-                        </div>
-    
-    
-                    </div>
-                </div>
+  <div>
+    <h1 class="text-center font-15 fw-bold mt-4">Favorite</h1>
+  </div>
+  <div class="container-fluid">
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-xl-3" *ngFor="let product of wishlist">
+        <div class="product-cart">
+          <div class="product-cart-img position-relative">
+            <div class="div">
+              <img
+                [src]="product.imageCover"
+                class="w-100"
+                [alt]="product.title"
+              />
             </div>
-    
-    
+
+            <div
+              class="product-love"
+              (click)="deleteItem(product._id)"
+              *ngIf="!wishlist.includes($any(product._id))"
+            >
+              <img src="./assets/image/love.png" width="25px" alt="" />
+            </div>
+
+            <div class="add d-flex align-items-center">
+              <button
+                class="reviwe w-50 button-big"
+                [routerLink]="['/details', product._id]"
+              >
+                Quick Review <i class="fa-solid fa-info ps-2 fa-6"></i>
+              </button>
+              <button
+                class="add-to-cart w-50 button-big"
+                (click)="addToCart(product._id)"
+              >
+                Add to cart <img src="./assets/image/add.png" width="25px" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-cart-info py-3">
+          <div class="product-details" [routerLink]="['/details', product._id]">
+            <h3 class="fs">{{ product.title | cutText : 2 }}</h3>
+          </div>
+
+          <div class="product-ratting">
+            <i
+              [class.rating-color]="product.ratingsAverage >= star"
+              *ngFor="let star of [1, 2, 3, 4, 5]"
+              class="fa-solid fa-star"
+            ></i
+            ><span class="ps-2">({{ product.ratingsAverage }})</span>
+          </div>
+          <div
+            class="price d-flex flex-column my-4"
+            *ngIf="product.price > 100"
+          >
+            <h3 class="font-15">{{ product.price }} <span>EGP</span></h3>
+            <h3 class="font-15" *ngIf="product.price > 300">
+              30% Discount
+              <span class="mt-1 ps-2" [class.discount]="product.price > 300"
+                >{{ product.price | discount : 30 | number : "1.0-0" }}
+                <span>EGP</span>
+              </span>
+            </h3>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
